@@ -1,0 +1,64 @@
+
+question 2 
+
+sample input -- A1: 5, A2: 7, A3: 9, B1: 3, B2: 8, B3: =4+5, C1: =5+A1, C2: =A2+B2, C3: =C2+B3
+sample output -- we want appropriate result
+
+
+1. How will you tackle the challenge above?
+
+answer---
+i will first remove "=" and "space" from String. then
+
+i will split the string into array with ",";
+
+now our input will look something like this 
+
+  String[] arr = {A1:5, A2:7, A3:9, B1:3, B2:8, B3:4+5, C1:5+A1, C2:A2+B2, C3:C2+B3};
+
+	running a for loop on it 
+	
+	we will make a global MAP===> map=new HashMap();
+
+	for(int i=0;i<arr.lenght;i++)
+	{	
+		we,ll split each index with ":";
+		
+		the we,ll get two index at each sub array
+		run a loop again on sub array ;
+		
+		ex: {A,5} or {B3,9};
+		
+		now this subarray element at zero index is our key for map;
+		and value is at 1st index of subarray
+		we,ll check at every index of subarray that weather the key in the map is presnt or not
+		if present we,ll assign the value from the map to the value of other key . 
+		till the time A1 key was made then 1st index came it checked weather 5 key is present or not
+		if 5 is not presnt then it have convert the string into integer and stored the value for A1; 
+		 
+		example {
+			A1=5,
+			A2=7,
+			A3=9
+			}
+		
+			
+		
+
+
+	}  
+	we,ll get our map desried map
+
+
+	simply run a loop on map and get the desired output;
+	
+
+2. What type of errors you would you check for?
+
+	i will check for index out of bound,
+	i will check weather my key in the hashmap is null or not .
+
+
+ 3. How might a user break your code?
+i  user can break the code by providing any thing which is a symbol in place of Intger value of A1 or A2. 
+ 
