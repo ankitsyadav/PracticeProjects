@@ -1,0 +1,12 @@
+3) Question: what are the key things you would consider when creating/consuming an API to ensure that it is secure and reliable?
+
+
+i will keep all feilds private
+and expose my class with model mapper so that client do not have acces to direct access of my entity
+
+will also make proper exceptional handling using global exceptional handler
+
+use some annotations valid keeps checks and balance on client to insert appropriate data
+
+
+
